@@ -14,8 +14,8 @@
 		},
 	};
 </script>
-<!-- css 代码 -->
-<style>
+<!-- css 代码: css less scss -->
+<style lang="less">
 	#app {
 		background-color: pink;
 	}
