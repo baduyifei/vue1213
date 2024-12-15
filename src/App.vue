@@ -2,15 +2,25 @@
 <!--  html 代码  -->
 <template>
 	<div id="app">
-		<img alt="Vue logo" src="./assets/logo.png" />
+		<!-- <h1>你好 VUE</h1>
+		<img alt="Vue logo" src="./assets/logo.png" /> -->
+		<div>{{ obj }}</div>
+		<div>{{ obj.name }}</div>
+		<div>{{ obj.age }}</div>
 	</div>
 </template>
 <!-- js 代码 -->
 <script>
 	export default {
-		name: 'App',
-		components: {
-			HelloWorld,
+		data() {
+			return {
+				// money: 100,
+				// zs: 'zs11111',
+				obj: {
+					name: 'zhangsan',
+					age: 13,
+				},
+			};
 		},
 	};
 </script>
@@ -18,5 +28,8 @@
 <style lang="less">
 	#app {
 		background-color: pink;
+		h1 {
+			color: green;
+		}
 	}
 </style>
