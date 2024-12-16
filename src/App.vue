@@ -1,35 +1,36 @@
 <!-- @format -->
-<!--  html 代码  -->
+
 <template>
-	<div id="app">
-		<!-- <h1>你好 VUE</h1>
-		<img alt="Vue logo" src="./assets/logo.png" /> -->
-		<div>{{ obj }}</div>
-		<div>{{ obj.name }}</div>
-		<div>{{ obj.age }}</div>
+	<div>
+		<h1>v-bind</h1>
+		<!-- <a :href="msg">百度</a> -->
+		<a v-bind:href="msg">{{ msg }}</a>
+		<p>商品数量: {{ num }}</p>
+		<button v-on:click="num++">+1</button>
+		<button v-on:click="add">+2</button>
 	</div>
 </template>
-<!-- js 代码 -->
+
 <script>
 	export default {
 		data() {
 			return {
-				// money: 100,
-				// zs: 'zs11111',
-				obj: {
-					name: 'zhangsan',
-					age: 13,
-				},
+				msg: 'www.baidu.com',
+				num: 10,
 			};
+		},
+		// 函数  method:方法
+		methods: {
+			add() {
+				//
+				// 函数内部：
+				//   this指向：vue项目 .vue文件 组件文件！this：为当前组件！
+				//   this上面  有初始化 变量名：值
+				// num += 2; // 报错:  num is not defined
+				this.num += 2;
+			},
 		},
 	};
 </script>
-<!-- css 代码: css less scss -->
-<style lang="less">
-	#app {
-		background-color: pink;
-		h1 {
-			color: green;
-		}
-	}
-</style>
+
+<style></style>
